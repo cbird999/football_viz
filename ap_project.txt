@@ -1,0 +1,7 @@
+AP ->
+ - 32 circles in a clock formation
+ - one circle moves to middle
+ - arrows point from middle circle to external circle and vice versa
+ 
+ 
+ If great circle diameter = 100
