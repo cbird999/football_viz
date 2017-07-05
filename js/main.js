@@ -12,11 +12,6 @@ var Vis = {};
     numberTeams = 32,
     teamRadius = (Math.PI * (outerRadius + innerRadius) / 2) / numberTeams - 2;
 
-  var svg = d3.select('#circle')
-	  .append('svg')
-	  .attr('width', w)
-	  .attr('height', h);
-
 	var svg = d3.select('#pie')
 	  .append('svg')
 	  .attr('width', w)
@@ -48,7 +43,7 @@ var Vis = {};
   teamsData = []
   for (var i = 1; i <= numberTeams; i++) {
   	var teamName = 'Team ' + i;
-  	teamObj = {name: teamName, val: 1};
+  	teamObj = { name: teamName, val: 1 };
   	teamsData.push(teamObj);
   }
   
@@ -61,6 +56,8 @@ var Vis = {};
     .outerRadius(outerRadius);
 
   var isTeamCentered = false;
+
+
 	pieGroup.selectAll('circle')
 	.data(pie(teamsData))
 	.enter().append('circle')
@@ -71,10 +68,10 @@ var Vis = {};
 			.attr('cx', centroid[0])
 			.attr('cy', centroid[1])
 			.attr('r', teamRadius)
-			.attr('dy', '0.33em')
+			//.attr('dy', '1em')
 			.attr('class', 'team')
-			.attr('popupHTML', d.data.name)
-			.text('team');
+			.attr('popupHTML', d.data.name);
+			//.text('team');
 	})
 	.attr('transform', 'translate(' + w/2 + ',' + h/2 + ')')
 	.on('mouseover', function(d,i) {
@@ -170,7 +167,6 @@ var Vis = {};
 								}								
 							})
 							.attr('marker-end', 'url(#arrow)')
-							.attr('transform', 'translate(500, 100)')
 							.attr('transform', 'translate(' + w/2 + ',' + h/2 + ')')
 							.attr('opacity', '0')
 							.transition()

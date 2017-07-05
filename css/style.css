@@ -8,61 +8,54 @@
 	stroke: orange;
 	stroke-width: 1;
 }
-
 .circle-group .large-circle {
 	fill: orange;
 	stroke: blue;
 	stroke-width: 1;
 }
-
 .arc path {
   stroke: #fff;
   fill: #ddd;
 }
-
 .arc circle {
   stroke: blue;
   fill: #ddd;
 }
-
 .pie-group .pie {
 	fill: steelblue;
 	stroke: #fff;
 	stroke-width: 1px;
 }
-
 .pie-group circle, .pie-group .team {
 	fill: orange;
 	stroke: #fff;
 	stroke-width: 1px;
 }
-
 .pie-group .team-hover {
 	stroke: blue;
 }
-
 .trade {
 	stroke: steelblue;
 	stroke-width: 1;
 	fill: none;
 }
-
+.trade.low {
+	stroke: steelblue;
+	stroke-width: 1;
+	fill: none;
+}
 .trade.moderate {
 	stroke-width: 2;
 }
-
 .trade.high {
 	stroke-width: 3;
 }
-
 .arrow {
 	pointer-events: none;
 }
-
 #arrow {
 	fill: steelblue;	
 }
-
 #tooltip {
   position: absolute;
   text-align: center;
